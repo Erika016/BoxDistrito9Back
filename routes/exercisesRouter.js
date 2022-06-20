@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controlador = require('../controllers/exercisesControllers');
+const controlador = require('../controllers/exercisesController');
 
 //Mostrar ejercicios
 //Show exercises

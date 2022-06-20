@@ -1,7 +1,7 @@
 const app = require('../app');
 const os = require("os");
 
-app.set('port', process.env.PORT || 8000);
+app.set('port', process.env.PORT || 3000);
 const port = app.get("port");
 
 app.listen(app.get("port"), (req, res) => {

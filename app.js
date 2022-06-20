@@ -3,7 +3,7 @@
 
 const express = require('express');
 const path = require('path');
-// const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -15,12 +15,12 @@ const bodyParser = require("body-parser");
 
 const userRouter = require('./routes/userRouter');
 const classRouter = require('./routes/classRouter');
-const tarifRouter = require('./routes/tariffsRouter');
-const payRouter = require('./routes/payRouter');
-const newsRouter = require('./routes/newsRouter');
+// const tarifRouter = require('./routes/tariffsRouter');
+// const payRouter = require('./routes/payRouter');
+// const newsRouter = require('./routes/newsRouter');
 const exercisesRouter = require('./routes/exercisesRouter');
-const swaggerUi = require('swagger-ui-express');
-swaggerDocument = require('./swagger/swagger.json');
+// const swaggerUi = require('swagger-ui-express');
+// swaggerDocument = require('./swagger/swagger.json');
 
 const app = express();
 
@@ -42,11 +42,11 @@ app.use(
 // app.use('/', homeRouter);
 app.use('/user', userRouter);
 app.use('/class', classRouter);
-app.use('/tarif', tarifRouter);
-app.use('/pay', payRouter);
-app.use('/news', newsRouter);
+// app.use('/tarif', tarifRouter);
+// app.use('/pay', payRouter);
+// app.use('/news', newsRouter);
 app.use('/exercises',exercisesRouter);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
 module.exports = app;

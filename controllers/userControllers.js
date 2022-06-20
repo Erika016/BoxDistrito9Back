@@ -1,4 +1,4 @@
-var dbMysql = require("../database/db");
+const dbMysql = require("../database/db");
 
 /**
  * @class UserController

@@ -127,7 +127,7 @@ class ExercisesController {
     } = req.body;
 
     dbMysql.query(
-      'INSERT INTO Pesos (UID, idEjercicio, fechaPeso, peso) VALUES (?, ?, ?, ?)',
+      'INSERT INTO Pesos (id_User, id_exercise, date, weith) VALUES (?, ?, ?, ?)',
       [id_User, id_exerise, date, weith],
       (err, rows) => {
         if (err) console.log(err);
